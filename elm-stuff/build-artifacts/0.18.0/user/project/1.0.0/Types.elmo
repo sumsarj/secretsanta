@@ -1,0 +1,16 @@
+var _user$project$Types$Model = F4(
+	function (a, b, c, d) {
+		return {view: a, name: b, group_name: c, vald: d};
+	});
+var _user$project$Types$Message = function (a) {
+	return {ctor: 'Message', _0: a};
+};
+var _user$project$Types$Fetch = {ctor: 'Fetch'};
+var _user$project$Types$GroupName = function (a) {
+	return {ctor: 'GroupName', _0: a};
+};
+var _user$project$Types$Name = function (a) {
+	return {ctor: 'Name', _0: a};
+};
+var _user$project$Types$ResultView = {ctor: 'ResultView'};
+var _user$project$Types$StartView = {ctor: 'StartView'};
