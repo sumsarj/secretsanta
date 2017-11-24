@@ -19,7 +19,7 @@ update msg model =
   case msg of
     Name firstName -> ({model | name = firstName}, Cmd.none)
     GroupName familyName -> ({model | group_name = familyName},Cmd.none)
-    Fetch -> (model, WebSocket.send "ws://localhost:8080"
+    Fetch -> (model, WebSocket.send "ws://rasmusjohansson.me:8080"
                      ("fetch|" ++ model.group_name ++"|" ++ model.name) )
 
 
@@ -50,4 +50,4 @@ extract x = case x of
 
 subscriptions : Model -> Sub Msg
 subscriptions model = 
-  Sub.batch [WebSocket.listen "ws://localhost:8080" Message]    
+  Sub.batch [WebSocket.listen "ws://rasmusjohansson.me:8080" Message]    
